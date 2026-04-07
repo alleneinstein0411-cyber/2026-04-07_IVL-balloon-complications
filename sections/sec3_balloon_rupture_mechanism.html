@@ -1,0 +1,167 @@
+<section id="sec3">
+  <h2>Section 3：Balloon Rupture 機轉</h2>
+
+  <!-- ===== 3-1  正常 IVL 物理學 ===== -->
+  <h3 id="sec3-1">3.1 正常 IVL 震波物理學</h3>
+  <p>
+    冠狀動脈 intravascular lithotripsy（IVL）的核心機制為
+    electrohydraulic lithotripsy（EHL）：導管內微型 emitter 於流體介質中放電，
+    產生 spark → vapour bubble → acoustic pressure wave，
+    此聲波傳入鈣化斑塊後即可造成 calcium fracture<sup>[CARD-006]</sup> <span class="badge-evidence">🟢 Expert Review</span>。
+    每次脈衝所產生的 circumferential pressure 約 50 atm，脈衝持續時間 0.6-1.2 ms，
+    發射頻率 1 Hz<sup>[CARD-006]</sup>。
+    然而單次脈衝所攜帶的能量極低——每 pulse 僅 8-10 mJ，
+    能量通量密度（energy flux density）為 0.0086 mJ/mm<sup>2</sup><sup>[CARD-006]</sup>。
+  </p>
+  <p>
+    IVL 之所以能選擇性碎鈣而不損傷正常軟組織，關鍵在於聲阻抗（acoustic impedance）差異：
+    水的聲阻抗為 1.5 &times; 10<sup>6</sup> kg/m<sup>2</sup>s，
+    肌肉組織為 1.7 &times; 10<sup>6</sup> kg/m<sup>2</sup>s，
+    而鈣化組織則高達 7.8 &times; 10<sup>6</sup> kg/m<sup>2</sup>s<sup>[CARD-006]</sup> <span class="badge-evidence">🟢 Expert Review</span>。
+    聲波在阻抗相近的軟組織中幾乎不被反射，但在高阻抗的鈣化界面上產生強烈反射與應力集中，
+    從而造成裂縫。此外，semi-compliant balloon 在治療過程中扮演「containment」角色——
+    將 vapour bubble 限制在 balloon 腔內，並透過每序列後的 periodic deflation 進行散熱<sup>[CARD-006]</sup>。
+  </p>
+
+  <figure id="fig-ivl-mechanism">
+    <img src="../images/CARD-006_fig01_IVL_mechanism.png"
+         alt="IVL Shockwave Generation 步驟圖：EHL spark → vapour bubble → acoustic wave → calcium fracture"
+         loading="lazy" />
+    <figcaption>
+      <strong>Figure 3-1.</strong> IVL 震波產生機制。EHL emitter 在流體中放電形成 vapour bubble，
+      bubble 膨脹與塌陷產生 acoustic pressure wave，傳入鈣化組織後造成 fracture。
+      <em>來源：</em><sup>[CARD-006]</sup> <span class="badge-evidence">🟢 Expert Review</span>
+    </figcaption>
+  </figure>
+
+  <!-- ===== 3-2  Benign balloon rupture ===== -->
+  <h3 id="sec3-2">3.2 Benign Balloon Rupture — Material Fatigue</h3>
+  <p>
+    每支 IVL catheter 的最大允許使用量為 80 pulses，以每秒 1 pulse 的頻率發射，
+    每 10 pulses 為一個序列（set）<sup>[CARD-007]</sup> <span class="badge-evidence">🟢 Expert Review</span>。
+    導管內配備 multiple emitter wires，在 rigorous catheter manipulation（如反覆推送通過嚴重鈣化或扭曲血管）
+    過程中可能發生導線損壞<sup>[CARD-007]</sup>。
+    Balloon 腔內須維持足夠空間以形成 vapour bubbles，方能最佳化 sonic output<sup>[CARD-007]</sup>。
+    IVL 以低壓（4 atm）充氣，此設計本身即可減少 barotrauma 風險<sup>[CARD-007]</sup>。
+  </p>
+  <p>
+    隨著累積脈衝數增加，balloon 材料承受反覆的 bubble 膨脹—塌陷周期，
+    逐漸產生 material fatigue，最終可能出現 pin-hole leak 導致壓力下降。
+    在 German multicentre registry（Aksoy et al.）中，balloon rupture 發生率為 9%，
+    但大多數情況並不導致 dissection 或 perforation<sup>[CARD-008]</sup> <span class="badge-evidence">🟢 Case Report，引述 registry 數據</span>。
+    換言之，多數 balloon rupture 為良性事件（benign），表現僅為 indeflator 壓力下降，
+    不伴隨臨床後果。
+  </p>
+
+  <!-- ===== 3-3  Clinically significant rupture ===== -->
+  <h3 id="sec3-3">3.3 Clinically Significant Rupture — 三大風險特徵、Thermal Injury 與 Hydraulic Propagation</h3>
+
+  <h4>三大風險特徵（OCT 辨識）</h4>
+  <p>
+    並非所有 balloon rupture 皆為良性。在一例 71 歲女性（NSTE-ACS、tortuous heavily calcified LAD）中，
+    使用 IVL 3.0 &times; 12 mm catheter 以 4 atm 治療時，
+    於第 38 次 pulse 時發生 balloon rupture<sup>[CARD-008]</sup> <span class="badge-evidence">🟢 Case Report</span>。
+    Rupture 後顯影劑滲入 subintimal space，造成 Type E spiral dissection<sup>[CARD-008]</sup>。
+    作者以 OCT 回顧分析，辨識出三大可能促成 clinically significant rupture 的風險特徵<sup>[CARD-008]</sup>：
+  </p>
+  <ol>
+    <li><strong>Luminally protruding nodular calcium</strong>——鈣化結節突入管腔，可如尖銳物般刺穿 balloon</li>
+    <li><strong>Significant tortuosity of calcified coronary lesion</strong>——嚴重彎曲使 balloon 無法均勻貼合血管壁</li>
+    <li><strong>Possible gaps in contact between balloon and luminal wall</strong>——balloon 與管壁間存在間隙，導致局部受力不均</li>
+  </ol>
+  <p>
+    此前已有兩例文獻報告在 tortuous vessel 中發生 balloon rupture，
+    但均未使用 intracoronary imaging 進行後續分析<sup>[CARD-008]</sup>。
+  </p>
+
+  <figure id="fig-oct-risk">
+    <img src="../images/CARD-008_fig03_OCT_eccentric_calcium.png"
+         alt="OCT 影像顯示 eccentric calcium 與 nodular calcium protruding into lumen"
+         loading="lazy" />
+    <figcaption>
+      <strong>Figure 3-2.</strong> OCT 顯示 eccentric calcium 與 luminally protruding nodular calcium——
+      此為 balloon rupture 的風險特徵之一。
+      <em>來源：</em><sup>[CARD-008]</sup> <span class="badge-evidence">🟢 Case Report</span>
+    </figcaption>
+  </figure>
+
+  <figure id="fig-rupture-dissection">
+    <img src="../images/CARD-008_fig04_balloon_rupture_dissection.png"
+         alt="Balloon rupture 後造成 coronary dissection 的影像"
+         loading="lazy" />
+    <figcaption>
+      <strong>Figure 3-3.</strong> IVL balloon rupture 後造成 coronary dissection。
+      Contrast 滲入 subintimal space，形成 Type E spiral dissection。
+      <em>來源：</em><sup>[CARD-008]</sup> <span class="badge-evidence">🟢 Case Report</span>
+    </figcaption>
+  </figure>
+
+  <h4>Thermal Injury 機轉</h4>
+  <p>
+    在另一例 82 歲女性（stable angina、mid-LAD severe calcification）中，
+    使用 IVL 2.5 &times; 12 mm catheter 時於 pulse delivery 過程中發生 balloon rupture<sup>[CARD-009]</sup> <span class="badge-evidence">🟢 Case Report, 2026</span>。
+    術者注意到 indeflator pressure 突然下降，術後確認為 pin-hole tear<sup>[CARD-009]</sup>。
+    作者提出 thermal injury 機轉：當 eccentric（noncircumferential）calcification 導致 balloon 產生
+    asymmetric expansion 時，emitter 可能接近甚至直接接觸 balloon wall，
+    其產生的熱能即可造成 balloon 的 thermal injury 而導致 rupture<sup>[CARD-009]</sup>。
+    值得注意的是，此案例並無 severe tortuosity——
+    eccentric calcification 單獨即足以造成 asymmetric expansion 並促成 rupture<sup>[CARD-009]</sup>。
+  </p>
+
+  <h4>Hydraulic Propagation 機轉</h4>
+  <p>
+    同一案例揭示了 rupture 後更危險的續發機制——hydraulic propagation<sup>[CARD-009]</sup> <span class="badge-evidence">🟢 Case Report, 2026</span>。
+    Balloon rupture 後，術者進行 OCT contrast injection（10 mL at 3 mL/s），
+    此高壓注射造成了 extensive coronary dissection<sup>[CARD-009]</sup>。
+    Dissection 以 retrograde 方向由 LAD 延伸進入 left main（LM），再擴展至 LCx<sup>[CARD-009]</sup>。
+    作者以 "path of least resistance" 解釋此現象：
+    distal LAD 的 severe calcification 形成一道屏障（barrier），
+    intramural hematoma（IMH）無法向遠端擴展，遂被迫走 retrograde 路徑<sup>[CARD-009]</sup>。
+    其中涉及的物理機制包括 compliance mismatch 與 geometric steering——
+    鈣化段的高剛性與非鈣化段的順應性差異，引導血腫沿阻力最低的路徑擴散<sup>[CARD-009]</sup>。
+  </p>
+  <p>
+    基於此案例，作者提出三項關鍵教訓<sup>[CARD-009]</sup>：
+  </p>
+  <ul>
+    <li>Balloon rupture 後應盡量減少 contrast injection</li>
+    <li>避免在 rupture 後重複進行 OCT（因需高壓 contrast injection）</li>
+    <li>重新評估整個 coronary tree（reassess entire coronary tree），因 dissection 可能已 retrograde 擴展至遠處</li>
+  </ul>
+
+  <figure id="fig-angio-pre">
+    <img src="../images/CARD-009_fig01_angiography_pre.png"
+         alt="Baseline angiography 顯示 mid-LAD severe calcification"
+         loading="lazy" />
+    <figcaption>
+      <strong>Figure 3-4.</strong> 術前血管攝影顯示 mid-LAD severe calcification。
+      <em>來源：</em><sup>[CARD-009]</sup> <span class="badge-evidence">🟢 Case Report, 2026</span>
+    </figcaption>
+  </figure>
+
+  <figure id="fig-retrograde-dissection">
+    <img src="../images/CARD-009_fig02_retrograde_dissection.png"
+         alt="OCT 與 IVUS 顯示 retrograde dissection 由 LAD 延伸至 LM 與 LCx"
+         loading="lazy" />
+    <figcaption>
+      <strong>Figure 3-5.</strong> Balloon rupture 後 OCT contrast injection 導致 retrograde dissection，
+      由 LAD 延伸進入 left main 並擴展至 LCx。OCT 與 IVUS 影像證實 dissection 範圍。
+      <em>來源：</em><sup>[CARD-009]</sup> <span class="badge-evidence">🟢 Case Report, 2026</span>
+    </figcaption>
+  </figure>
+
+  <!-- ===== 3-4  Dry Shock ===== -->
+  <h3 id="sec3-4">3.4 Dry Shock</h3>
+  <p>
+    另一個可導致 balloon rupture 的機轉為 dry shock<sup>[CARD-019]</sup> <span class="badge-evidence">🟢 Expert Opinion</span>。
+    當 balloon 腔內殘留空氣時，shock wave amplitude 可降低約 20%<sup>[CARD-019]</sup>。
+    更重要的是，air residual 使 emitter 在非流體環境中放電，
+    產生所謂 dry shock——此異常放電可直接損傷 balloon 壁而導致 rupture<sup>[CARD-019]</sup>。
+    IVL 以 4 atm 充氣並非 nominal pressure，其真正目的是確保 balloon 內完全被流體填充（fluid coverage），
+    以避免 dry shock 的發生<sup>[CARD-019]</sup>。
+    使用更高的充氣壓力不但不會增加能量傳遞效率
+    （因聲波遵循 inverse square law，強度隨距離平方衰減），
+    反而會增加 balloon damage 的風險<sup>[CARD-019]</sup>。
+  </p>
+
+</section>
