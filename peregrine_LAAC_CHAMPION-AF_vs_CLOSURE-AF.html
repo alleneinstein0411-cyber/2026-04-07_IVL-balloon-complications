@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAMPION-AF vs CLOSURE-AF：左心耳封堵 vs NOAC — 遊隼導讀</title>
+  <style>
+    body { font-family: 'Noto Sans TC', -apple-system, sans-serif; margin: 0; background: #f8f9fa; color: #1a1a2e; line-height: 1.7; }
+    .banner { background: linear-gradient(135deg, #0d1b2a, #1b3a5c, #274c77); color: white; padding: 3rem 2rem; text-align: center; position: relative; }
+    .banner-icon { position: absolute; top: 1.5rem; right: 2rem; font-size: 2.5rem; opacity: 0.3; }
+    .banner h1 { font-size: 2rem; margin: 0; }
+    .subtitle { opacity: 0.85; margin-top: 0.5rem; }
+    .meta-row { margin-top: 1rem; display: flex; justify-content: center; gap: 2rem; font-size: 0.9rem; opacity: 0.8; }
+    .layout { display: flex; max-width: 1300px; margin: 0 auto; gap: 2rem; padding: 2rem; }
+    .sidebar { width: 260px; flex-shrink: 0; position: sticky; top: 2rem; height: fit-content; }
+    .toc { list-style: none; padding: 0; }
+    .toc li { margin: 0.5rem 0; }
+    .toc a { text-decoration: none; color: #274c77; font-size: 0.9rem; padding: 0.3rem 0.8rem; display: block; border-radius: 4px; transition: background 0.2s; }
+    .toc a:hover { background: #e3f2fd; font-weight: 600; }
+    .sidebar-label { margin-top: 2rem; text-align: center; color: #999; font-size: 0.8rem; }
+    .content { flex: 1; max-width: 960px; }
+    .content section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .content section h2 { color: #274c77; border-bottom: 2px solid #e3f2fd; padding-bottom: 0.5rem; }
+    .timeline-box { background: linear-gradient(135deg, #e8f4f8, #d6eaf8); border-left: 4px solid #274c77; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .guideline-box { background: #eef5ff; border-left: 4px solid #2196f3; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .pico-box { background: #f0f7f0; border: 2px solid #4caf50; padding: 1.5rem; margin: 1rem 0; border-radius: 8px; }
+    .pico-box h3 { color: #2e7d32; margin-top: 0; }
+    .novelty-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-left: 4px solid #ff9800; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; font-weight: 500; }
+    .concordance-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 1rem; margin: 0.5rem 0; border-radius: 0 8px 8px 0; }
+    .discordance-box { background: #fce4ec; border-left: 4px solid #e91e63; padding: 1rem; margin: 0.5rem 0; border-radius: 0 8px 8px 0; }
+    .expert-quote { border-left: 4px solid #9c27b0; padding: 0.8rem 1.2rem; margin: 1rem 0; font-style: italic; background: #f3e5f5; border-radius: 0 8px 8px 0; }
+    .consensus-box { background: #e0f2f1; border-left: 4px solid #009688; padding: 1rem; margin: 0.5rem 0; border-radius: 0 8px 8px 0; }
+    .controversy-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem; margin: 0.5rem 0; border-radius: 0 8px 8px 0; }
+    .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    .impact-panel { padding: 1.2rem; border-radius: 8px; border: 1px solid #ddd; }
+    .impact-panel:nth-child(1) { background: #e3f2fd; }
+    .impact-panel:nth-child(2) { background: #f3e5f5; }
+    .impact-panel:nth-child(3) { background: #e8f5e9; }
+    .impact-panel:nth-child(4) { background: #fff3e0; }
+    .impact-panel h4 { margin-top: 0; }
+    .limitation-major { border-left: 4px solid #e53935; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #ffebee; }
+    .limitation-moderate { border-left: 4px solid #ff9800; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #fff3e0; }
+    .limitation-minor { border-left: 4px solid #ffc107; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #fffde7; }
+    .ai-disclaimer { background: linear-gradient(135deg, #263238, #37474f); color: #b0bec5; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .ai-disclaimer strong { color: #4fc3f7; }
+    #s7 { background: linear-gradient(135deg, #fafafa, #f0f0f0); border: 2px dashed #bdbdbd; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th { background: #274c77; color: white; padding: 0.7rem; text-align: left; }
+    td { padding: 0.6rem 0.7rem; border-bottom: 1px solid #eee; }
+    tr:hover { background: #f5f5f5; }
+    .comparison-table th { background: #1b3a5c; }
+    .results-table th { background: #2e7d32; }
+    .cite { color: #1565c0; font-weight: 600; cursor: pointer; }
+    .cite:hover { text-decoration: underline; }
+    .tag-cite { background: #e3f2fd; color: #1565c0; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; }
+    .tag-ai { background: #f3e5f5; color: #7b1fa2; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; }
+    .references table { font-size: 0.85rem; }
+    .references th { background: #37474f; }
+    footer { text-align: center; padding: 2rem; color: #999; font-size: 0.8rem; }
+    .footer-disclaimer { font-style: italic; }
+    @media (max-width: 768px) { .layout { flex-direction: column; } .sidebar { display: none; } .impact-grid { grid-template-columns: 1fr; } }
+    .section-tag { display: inline-block; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem; }
+    .figure-container { text-align: center; margin: 1.5rem 0; }
+    .figure-container img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .figure-caption { font-size: 0.85rem; color: #666; margin-top: 0.5rem; font-style: italic; }
+
+    /* 雙向引用 */
+    .cite a { color: #1565c0; font-weight: 600; text-decoration: none; }
+    .cite a:hover { text-decoration: underline; }
+    #refs td a[href^="#cite"] { font-size: 0.8rem; color: #666; margin-left: 4px; }
+    #refs td a[href^="#cite"]:hover { color: #1565c0; }
+    /* 跳轉高亮效果 */
+    :target { background-color: #fff9c4; transition: background-color 0.3s; }
+  </style>
+</head>
+<body>
+
+<header class="banner">
+  <div class="banner-icon">🦅</div>
+  <h1>CHAMPION-AF vs CLOSURE-AF</h1>
+  <p class="subtitle">左心耳封堵（LAAC）與非維他命 K 拮抗劑口服抗凝藥（NOAC）之 Head-to-Head 比較</p>
+  <div class="meta-row">
+    <span>📅 2026-04-12</span><span>🏥 心臟電生理 / 心律不整</span><span>📊 3 references</span>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidebar">
+    <ul class="toc">
+      <li><a href="#s1">§1 The Stage</a></li>
+      <li><a href="#s2">§2 The Study</a></li>
+      <li><a href="#s3">§3 Parallel Voices</a></li>
+      <li><a href="#s4">§4 Expert Panel</a></li>
+      <li><a href="#s5">§5 Bedside Translation</a></li>
+      <li><a href="#s6">§6 Cracks in the Armor</a></li>
+      <li><a href="#s7">§7 The Roast Round</a></li>
+      <li><a href="#refs">References</a></li>
+    </ul>
+    <div class="sidebar-label">遊隼導讀</div>
+  </nav>
+
+  <main class="content">
+
+    <!-- ====== §1 THE STAGE ====== -->
+    <section id="s1">
+      <span class="section-tag tag-ai">🤖 主要為 AI 背景知識</span>
+      <h2>§1 The Stage — 背景與臨床問題</h2>
+
+      <p>凌晨兩點，急診電話響起：一位 82 歲長期服用 apixaban 的心房顫動（AF）患者，跌倒後出現顱內出血。你一邊安排緊急影像，一邊想著——有沒有一種方式，既能預防中風，又能避免這種出血悲劇？ <span class="tag-ai">🤖</span></p>
+
+      <div class="timeline-box">
+        <h3>證據里程碑時間線</h3>
+        <p><strong>AF 流行病學背景</strong>：心房顫動影響全球約 6000 萬人口，是最常見的持續性心律不整。未經治療的 AF 患者每年中風風險為 3-5%<span class="tag-ai">🤖</span>，而中風一旦發生，致殘率與死亡率極高。<span class="tag-ai">🤖</span></p>
+        <p><strong>抗凝治療演進</strong>：Warfarin 時代（1950s-2010s）將 AF 相關中風風險降低約 60-70%，但代價是頻繁的 INR 監測與 2-3%/年的重大出血率。<span class="tag-ai">🤖</span> 2010 年後，NOAC（dabigatran, rivaroxaban, apixaban, edoxaban）革命性地簡化了抗凝管理，在維持中風預防效果的同時降低了顱內出血風險。<span class="tag-ai">🤖</span></p>
+        <p><strong>LAAC 技術發展</strong>：基於一項關鍵的病理學觀察——超過 90% 的非瓣膜性 AF 相關血栓源自左心耳（LAA）<span class="tag-ai">🤖</span>——經導管左心耳封堵術應運而生。PROTECT-AF（2009, n=707）首次證實 Watchman 裝置對 warfarin 的非劣效性；PREVAIL（2014, n=407）補充了安全性數據。<span class="tag-ai">🤖</span> 然而，這兩項試驗的對照組均為 warfarin，且族群主要為抗凝「高出血風險」或「不耐受」患者。<span class="tag-ai">🤖</span></p>
+      </div>
+
+      <div class="guideline-box">
+        <h3>知識缺口：進入 NOAC 時代後的空白</h3>
+        <p>截至 2024 年，LAAC 領域存在一個根本性的未解問題：<strong>在適合且能耐受 NOAC 治療的 AF 患者中，LAAC 是否為一個合理的替代方案？</strong> <span class="tag-ai">🤖</span></p>
+        <p>先前的 PROTECT-AF 和 PREVAIL 僅以 warfarin 為對照；PRAGUE-17（n=402）雖以 NOAC 為對照並顯示非劣效性，但樣本量偏小，證據等級有限。<span class="tag-ai">🤖</span> 臨床指引因此將 LAAC 定位為「抗凝禁忌的替代方案」（Class IIb），而非一線選擇。<span class="tag-ai">🤖</span></p>
+        <p>2026 年 3 月，兩篇同期發表於 <em>New England Journal of Medicine</em> 的大型隨機對照試驗——<strong>CHAMPION-AF</strong> <span class="cite" id="cite-1-a" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 與 <strong>CLOSURE-AF</strong> <span class="cite" id="cite-2-a" data-card="LAAC-002"><a href="#ref-2">[2]</a></span>——正式填補了這一缺口。然而，它們給出的答案截然不同。</p>
+      </div>
+    </section>
+
+    <!-- ====== §2 THE STUDY ====== -->
+    <section id="s2">
+      <span class="section-tag tag-cite">📎 主要引用 LAAC-001</span>
+      <h2>§2 The Study — CHAMPION-AF 研究解析</h2>
+
+      <div class="pico-box">
+        <h3>PICO 框架</h3>
+        <table>
+          <tr><th style="width:15%">項目</th><th>內容</th></tr>
+          <tr><td><strong>P</strong></td><td>心房顫動且具中風風險（CHA₂DS₂-VASc 男性 ≥2、女性 ≥3）、<strong>適合長期口服抗凝血劑</strong>的成人。3000 人，16 國 141 中心。平均年齡 71.7±7.5 歲，31.9% 女性，平均 CHA₂DS₂-VASc 3.5±1.3，平均 HAS-BLED 1.3±0.8。68.9% 陣發性 AF，47.8% 曾接受 AF 消融術。📎 <span class="cite" id="cite-1-b" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></td></tr>
+          <tr><td><strong>I</strong></td><td>Watchman FLX（Boston Scientific）左心耳封堵術。隨機分配後 14 天內植入。術後前 3 個月 NOAC+aspirin 或 NOAC 單獨或 DAPT；3 個月後改為抗血小板單藥。N=1499。📎 <span class="cite" id="cite-1-c" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></td></tr>
+          <tr><td><strong>C</strong></td><td>經核准之 NOAC 治療。N=1501，87% 在多數追蹤期回報服藥遵從。📎 <span class="cite" id="cite-1-d" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></td></tr>
+          <tr><td><strong>O</strong></td><td>Primary efficacy：3 年 CV death + stroke + systemic embolism 之複合終點（NI margin 4.8 pp）。Primary safety：3 年非手術相關出血（superiority）。📎 <span class="cite" id="cite-1-e" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></td></tr>
+        </table>
+      </div>
+
+      <h3>主要結果：數字先行</h3>
+
+      <table class="results-table">
+        <thead>
+          <tr><th>終點</th><th>Device (KM%)</th><th>NOAC (KM%)</th><th>HR (95% CI)</th><th>P 值</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Primary efficacy</strong><br>(CV death/stroke/SE)</td><td>81 events (5.7%)</td><td>65 events (4.8%)</td><td>1.20 (0.87-1.66)</td><td><strong>&lt;0.001 (NI)</strong></td></tr>
+          <tr><td><strong>Primary safety</strong><br>(非手術相關出血)</td><td>154 events (10.9%)</td><td>260 events (19.0%)</td><td>0.55 (0.45-0.67)</td><td><strong>&lt;0.001 (sup)</strong></td></tr>
+          <tr><td>Net clinical benefit</td><td>215 (15.1%)</td><td>300 (21.8%)</td><td>0.66 (0.56-0.79)</td><td>&lt;0.001 (NI)</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.85rem; color:#666;">📎 所有數據來自 CHAMPION-AF 3 年 ITT 分析 <span class="cite" id="cite-1-f" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></p>
+
+      <h3>Primary Efficacy 各成分拆解</h3>
+      <table class="results-table">
+        <thead>
+          <tr><th>成分</th><th>Device (KM%)</th><th>NOAC (KM%)</th><th>HR (95% CI)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>心血管死亡</td><td>38 (2.7%)</td><td>36 (2.7%)</td><td>1.01 (0.64-1.59)</td></tr>
+          <tr style="background:#fff3e0;"><td><strong>中風（all）</strong></td><td><strong>50 (3.6%)</strong></td><td><strong>33 (2.5%)</strong></td><td><strong>1.46 (0.94-2.27)</strong></td></tr>
+          <tr><td>全身性栓塞</td><td>0 (0%)</td><td>2 (0.1%)</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <p>📎 <span class="cite" id="cite-1-g" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 中風信號值得關注：device 組 3.6% vs NOAC 組 2.5%，HR 1.46，95% CI 上界達 2.27，雖未達統計顯著性，但絕對差異 1.1 個百分點在臨床上不容忽視。</p>
+
+      <div class="figure-container">
+        <img src="../images/LAAC-001_fig2a_km_primary_efficacy.png" alt="KM curve: Primary Efficacy Endpoint">
+        <p class="figure-caption">Figure 2A. Primary Efficacy Endpoint（CV death / stroke / SE）之 Kaplan-Meier 曲線 📎 <span class="cite" id="cite-1-h" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></p>
+      </div>
+
+      <div class="figure-container">
+        <img src="../images/LAAC-001_fig2b_km_primary_safety.png" alt="KM curve: Primary Safety Endpoint">
+        <p class="figure-caption">Figure 2B. Primary Safety Endpoint（非手術相關出血）之 Kaplan-Meier 曲線——兩曲線自 180 天後持續分離 📎 <span class="cite" id="cite-1-i" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></p>
+      </div>
+
+      <h3>安全性與手術成功率</h3>
+      <ul>
+        <li>裝置成功植入率：1386/1403 = <strong>98.8%</strong> 📎 <span class="cite" id="cite-1-j" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></li>
+        <li>有效封堵率（residual leak ≤3 mm, 4 months）：998/1012 = <strong>98.6%</strong> 📎 <span class="cite" id="cite-1-k" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></li>
+        <li>30 天內需處理之心包積液：10/1499 (<strong>0.7%</strong>) 📎 <span class="cite" id="cite-1-l" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></li>
+        <li>Device-related thrombus（DRT, 4 months）：63/1320 (<strong>4.8%</strong>)，其中 24 例（1.8%）clinically relevant（需恢復 OAC），2 人發生中風 📎 <span class="cite" id="cite-1-m" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></li>
+        <li>交叉汙染：抗凝血組有 206 名患者轉至 device 組（119 人在 primary endpoint event 前接受裝置）📎 <span class="cite" id="cite-1-n" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></li>
+      </ul>
+
+      <div class="figure-container">
+        <img src="../images/LAAC-001_fig3b_km_secondary_net_clinical_benefit.png" alt="KM curve: Net Clinical Benefit">
+        <p class="figure-caption">Figure 3B. Net Clinical Benefit 複合終點——LAAC 組持續優勢，HR 0.66 📎 <span class="cite" id="cite-1-o" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></p>
+      </div>
+
+      <div class="novelty-box">
+        <strong>📌 Novelty Statement</strong><br>
+        CHAMPION-AF 是首個在<strong>適合長期口服抗凝血劑</strong>的 AF 患者中，以大型 RCT 比較 LAAC（Watchman FLX）與 NOAC 的試驗。先前 PROTECT-AF 和 PREVAIL 僅以 warfarin 為對照，且限於不適合長期 OAC 者。本試驗首次建立 LAAC 在 NOAC 時代、anticoagulation-eligible 族群的 noninferiority 證據，並首次證實 LAAC 在減少出血方面 superior to NOAC。📎 <span class="cite" id="cite-1-p" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>
+      </div>
+    </section>
+
+    <!-- ====== §3 PARALLEL VOICES ====== -->
+    <section id="s3">
+      <span class="section-tag tag-cite">📎 LAAC-001 vs LAAC-002 互比較</span>
+      <h2>§3 Parallel Voices — CHAMPION-AF vs CLOSURE-AF</h2>
+
+      <p>2026 年 3 月底，NEJM 罕見地在同一期刊同時刊出兩篇 LAAC vs 藥物治療的大型 RCT——然而結論方向截然相反。以下我們逐項拆解兩試驗的設計與結果差異。</p>
+
+      <h3>CLOSURE-AF 核心結果</h3>
+      <p>📎 CLOSURE-AF 為一項 pragmatic、前瞻性、open-label、多中心隨機對照試驗，共納入 888 名 AF 患者（平均年齡 77.9±7.1 歲，CHA₂DS₂-VASc 5.2±1.5，HAS-BLED 3.0±0.9），於德國 42 中心進行。<span class="cite" id="cite-2-b" data-card="LAAC-002"><a href="#ref-2">[2]</a></span></p>
+      <p>📎 <strong>LAAC 未達非劣效性</strong>：Device 組主要終點發生率 16.8/100 patient-years vs medical-therapy 組 13.3/100 patient-years。RMST difference: <strong>-0.36 years (95% CI: -0.70 to -0.01); P=0.44 for noninferiority</strong>——LAAC 組結果反而更差。<span class="cite" id="cite-2-c" data-card="LAAC-002"><a href="#ref-2">[2]</a></span></p>
+      <p>📎 圍術期併發症 5.7%，包含 major bleeding 18 例、心包填塞 5 例、裝置脫位需手術 1 例、<strong>圍術期死亡 2 例</strong>。<span class="cite" id="cite-2-d" data-card="LAAC-002"><a href="#ref-2">[2]</a></span></p>
+
+      <div class="figure-container">
+        <img src="../images/LAAC-002_fig2a_km_primary_endpoint.png" alt="CLOSURE-AF KM curve: Primary Endpoint">
+        <p class="figure-caption">CLOSURE-AF Figure 2A. Primary Endpoint 累積發生率——Device 組（紅線）始終高於 Medical-therapy 組（藍線）📎 <span class="cite" id="cite-2-e" data-card="LAAC-002"><a href="#ref-2">[2]</a></span></p>
+      </div>
+
+      <h3>兩試驗關鍵差異比較表</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>項目</th><th>CHAMPION-AF <span class="cite" id="cite-1-q" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></th><th>CLOSURE-AF <span class="cite" id="cite-2-f" data-card="LAAC-002"><a href="#ref-2">[2]</a></span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>樣本數</strong></td><td>3000</td><td>888（原計畫 1586）</td></tr>
+          <tr><td><strong>平均年齡</strong></td><td>71.7 歲</td><td>77.9 歲</td></tr>
+          <tr><td><strong>CHA₂DS₂-VASc</strong></td><td>3.5</td><td>5.2</td></tr>
+          <tr><td><strong>HAS-BLED</strong></td><td>1.3</td><td>3.0</td></tr>
+          <tr><td><strong>入選標準特色</strong></td><td>抗凝適格</td><td>高中風 + 高出血風險</td></tr>
+          <tr><td><strong>對照組</strong></td><td>NOAC</td><td>Best medical care（85.1% DOAC）</td></tr>
+          <tr><td><strong>裝置</strong></td><td>Watchman FLX only</td><td>Watchman/FLX + Amulet + LAmbre</td></tr>
+          <tr><td><strong>NI margin</strong></td><td>4.8 pp (absolute)</td><td>HR 1.3 → 改 RMST</td></tr>
+          <tr><td><strong>Funding</strong></td><td>Boston Scientific（業界）</td><td>DZHK（公共經費）</td></tr>
+          <tr><td><strong>主要結果</strong></td><td><strong>NI 達標 + bleeding 優勢</strong></td><td><strong>未達 NI</strong></td></tr>
+          <tr><td><strong>中風發生率</strong></td><td>Device 3.6% vs NOAC 2.5%</td><td>兩組相當（1.8 vs 2.0/100 pt-yr）</td></tr>
+          <tr><td><strong>出血優勢</strong></td><td>HR 0.55（顯著）</td><td>LAAC 出血反而多（7.4 vs 6.2/100 pt-yr）</td></tr>
+          <tr><td><strong>圍術期併發症</strong></td><td>心包積液 0.7%</td><td>總計 5.7%（含 2 例死亡）</td></tr>
+        </tbody>
+      </table>
+
+      <div class="discordance-box">
+        <h4>❌ Discordance 判定</h4>
+        <p>📎 兩試驗結論方向相反：CHAMPION-AF 支持 LAAC 非劣於 NOAC 且出血更少 <span class="cite" id="cite-1-r" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>；CLOSURE-AF 則未能證實 LAAC 非劣於最佳藥物治療 <span class="cite" id="cite-2-g" data-card="LAAC-002"><a href="#ref-2">[2]</a></span>。</p>
+        <p>🤖 <span class="tag-ai">AI 綜合判斷</span>：分歧的核心原因可能在於三點——(1) <strong>族群差異</strong>：CLOSURE-AF 患者年齡大 6 歲、CHA₂DS₂-VASc 高 1.7 分、HAS-BLED 高 1.7 分，更高齡虛弱，圍術期風險更難被長期獲益抵消；(2) <strong>裝置差異</strong>：CHAMPION-AF 僅用 Watchman FLX（第三代），CLOSURE-AF 允許多種裝置，技術一致性較差；(3) <strong>統計效力差異</strong>：CLOSURE-AF 實際收案僅 888 人（原計畫 1586），power 不足。</p>
+      </div>
+
+      <div class="concordance-box">
+        <h4>✅ 唯一共識</h4>
+        <p>📎 兩試驗的缺血性中風發生率均相當：CHAMPION-AF device 3.6% vs NOAC 2.5% <span class="cite" id="cite-1-s" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>；CLOSURE-AF device 1.8 vs medical 2.0/100 pt-yr <span class="cite" id="cite-2-h" data-card="LAAC-002"><a href="#ref-2">[2]</a></span>。🤖 這提示 LAAC 確實具備中風預防能力，但不一定優於 NOAC。</p>
+      </div>
+    </section>
+
+    <!-- ====== §4 THE EXPERT PANEL ====== -->
+    <section id="s4">
+      <span class="section-tag tag-cite">📎 LAAC-003 Editorial</span>
+      <h2>§4 The Expert Panel — 專家觀點</h2>
+
+      <p>📎 <strong>評論者</strong>：Petr Widimský, M.D., Dr.Sc.（Charles University, Prague; PRAGUE-17 試驗主持團隊成員）。<span class="cite" id="cite-3-a" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+      <p>📎 <strong>Editorial 標題</strong>一語道破立場：「Left Atrial Appendage Closure — Another Overused Method in Cardiology?」<span class="cite" id="cite-3-b" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+
+      <div class="expert-quote">
+        <p>📎「Left atrial appendage closure failed to fulfill its theoretical promise to become an alternative treatment to best medical therapy — at least for older patients such as those enrolled in the trial.」<span class="cite" id="cite-3-c" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+      </div>
+
+      <h3>核心論點</h3>
+
+      <p><strong>1. Scylla vs Charybdis 困境</strong><br>
+      📎 Widimský 以希臘神話中 Odysseus 面對 Scylla（出血怪獸）與 Charybdis（漩渦）的比喻，指出 LAAC 的根本矛盾：為避免抗凝出血風險（Scylla），卻必須承擔圍術期併發症（Charybdis）——圍術期併發症率高達 5.7%，含 2 例死亡。<span class="cite" id="cite-3-d" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+
+      <p><strong>2. CLOSURE-AF vs PRAGUE-17 的詮釋</strong><br>
+      📎 Widimský 坦承自己參與的 PRAGUE-17（n=402, 平均 73 歲, 4 年追蹤）顯示 LAAC 非劣於 NOAC，但他認為 CLOSURE-AF 因樣本更大（888 vs 402）、更具真實世界代表性，其結論應「立即影響臨床實踐」。<span class="cite" id="cite-3-e" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+
+      <p><strong>3. 介入過度使用的更廣泛框架</strong><br>
+      📎 Widimský 將 LAAC 與其他「證據邊緣卻被過度使用」的心臟介入手段並列：腎臟去神經術（SYMPLICITY HTN-3 陰性，仍獲給付）、慢性完全閉塞 PCI（RCT 未顯示預後益處，仍廣泛施行）。他直言：財務誘因加上對前沿技術的追求，可能驅動介入過度使用。<span class="cite" id="cite-3-f" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+
+      <div class="consensus-box">
+        <h4>📌 Editorial 共識立場</h4>
+        <p>📎「Best individualized medical therapy should remain standard treatment for older patients.」<span class="cite" id="cite-3-g" data-card="LAAC-003"><a href="#ref-3">[3]</a></span></p>
+      </div>
+
+      <div class="controversy-box">
+        <h4>⚠️ 爭議與偏頗風險</h4>
+        <p>🤖 <span class="tag-ai">AI 判斷</span>：此 editorial <strong>僅評論 CLOSURE-AF，完全未提及 CHAMPION-AF</strong>（兩篇幾乎同時發表於 NEJM）。Widimský 的論述因此僅反映 LAAC 負面證據的觀點。此外，作為 PRAGUE-17 團隊成員（支持 LAAC 非劣效性），他選擇批評 CLOSURE-AF 而非討論 CHAMPION-AF 的動機值得讀者自行判斷。不過，他願意以更大規模試驗結果修正自己先前的結論（PRAGUE-17 → CLOSURE-AF），這一學術態度值得肯定。</p>
+      </div>
+    </section>
+
+    <!-- ====== §5 BEDSIDE TRANSLATION ====== -->
+    <section id="s5">
+      <span class="section-tag tag-ai">🤖 AI 綜合分析為主</span>
+      <h2>§5 Bedside Translation — 臨床啟示</h2>
+
+      <div class="impact-grid">
+        <div class="impact-panel">
+          <h4>📋 Guideline Implications</h4>
+          <p>📎 CHAMPION-AF 的正面結果可能推動指引將 LAAC 從 Class IIb（抗凝禁忌者的替代方案）升級為 Class IIa（抗凝適格者的個人化選項），但前提是 5 年追蹤數據能解決中風信號疑慮。<span class="cite" id="cite-1-t" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></p>
+          <p>🤖 <span class="tag-ai">AI</span>：CLOSURE-AF 的負面結果 <span class="cite" id="cite-2-i" data-card="LAAC-002"><a href="#ref-2">[2]</a></span> 則強化了現行指引對高齡高出血風險族群的謹慎立場——LAAC 不應被視為這類患者的常規方案。</p>
+        </div>
+        <div class="impact-panel">
+          <h4>🔄 Practice Pattern Shift</h4>
+          <p>🤖 <span class="tag-ai">AI</span>：LAAC 的臨床定位可能從「抗凝禁忌的救援方案」轉向「抗凝適格者的個人化選擇」——但這個轉變必須附帶嚴格的族群篩選。</p>
+          <p>📎 CHAMPION-AF 的 shared decision-making 討論明確指出，患者應充分了解出血減少與潛在中風風險增加之間的 trade-off。<span class="cite" id="cite-1-u" data-card="LAAC-001"><a href="#ref-1">[1]</a></span></p>
+        </div>
+        <div class="impact-panel">
+          <h4>🏥 Local Applicability（花蓮慈濟）</h4>
+          <p>🤖 <span class="tag-ai">AI</span>：台灣 AF 族群的 CHA₂DS₂-VASc 分布與歐美不同，且 NHIA 對 LAAC 的給付條件嚴格。花蓮慈濟作為區域醫學中心，LAAC 適應症應限於 CHAMPION-AF 族群特徵（CHA₂DS₂-VASc 3-4、非虛弱、可耐受手術），避免推廣至 CLOSURE-AF 型高齡虛弱患者。</p>
+        </div>
+        <div class="impact-panel">
+          <h4>❓ Unanswered Questions</h4>
+          <p>🤖 <span class="tag-ai">AI</span>：(1) 📎 中風信號（HR 1.46, 95% CI 0.94-2.27 <span class="cite" id="cite-1-v" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>）5 年追蹤是否惡化？ (2) DRT 4.8% 的長期臨床影響？ (3) 亞洲族群（體型較小、LAA 解剖差異）的裝置適合度？ (4) LAAC 後抗血小板方案的最佳策略？</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== §6 CRACKS IN THE ARMOR ====== -->
+    <section id="s6">
+      <h2>§6 Cracks in the Armor — 方法學批判</h2>
+
+      <h3>CHAMPION-AF 限制</h3>
+
+      <div class="limitation-major">
+        <strong>🔴 Major：NI margin 寬鬆問題</strong><br>
+        📎 CHAMPION-AF 設定 4.8 percentage points 的 absolute noninferiority margin，在實際低事件率（兩組 ~5%）下，相當於允許接近 100% 的 relative excess risk。<span class="cite" id="cite-1-w" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 🤖 <span class="tag-ai">AI</span>：3 年 primary efficacy 實際差異為 5.7% vs 4.8%（absolute difference 0.9 pp），被 4.8 pp 的寬鬆 margin 輕鬆吸收。若使用更嚴格的 margin（如 2.0 pp），結論可能翻轉。
+      </div>
+
+      <div class="limitation-major">
+        <strong>🔴 Major：中風信號不可忽視</strong><br>
+        📎 Device 組中風 3.6% vs NOAC 組 2.5%，HR 1.46 (95% CI 0.94-2.27)。<span class="cite" id="cite-1-x" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 🤖 <span class="tag-ai">AI</span>：個別成分趨勢不利（中風可能增加 46%），但 composite 達標——這是 classic noninferiority trial paradox：composite 端點的 noninferiority 可以掩蓋最重要成分（中風）的劣勢。
+      </div>
+
+      <div class="limitation-moderate">
+        <strong>🟡 Moderate：DRT 發生率 4.8%</strong><br>
+        📎 4 個月時 device-related thrombus 63/1320 (4.8%)，其中 2 人發生中風。<span class="cite" id="cite-1-y" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 🤖 <span class="tag-ai">AI</span>：此比例高於先前單臂研究的報告（~3-4%），其長期臨床意義與最佳處理策略尚待釐清。
+      </div>
+
+      <div class="limitation-moderate">
+        <strong>🟡 Moderate：Open-label design + 交叉汙染</strong><br>
+        📎 206 名抗凝血組患者交叉至 device 組，其中 119 人在 primary endpoint event 前接受裝置。<span class="cite" id="cite-1-z" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 🤖 <span class="tag-ai">AI</span>：ITT 分析中，交叉可能稀釋組間差異，使 NOAC 組看起來更接近 device 組，paradoxically favoring noninferiority。
+      </div>
+
+      <h3>CLOSURE-AF 限制</h3>
+
+      <div class="limitation-major">
+        <strong>🔴 Major：統計方法中途變更</strong><br>
+        📎 CLOSURE-AF 從 HR-based noninferiority 改為 RMST 分析，原因是比例風險假設不成立（Schoenfeld residual plots）。<span class="cite" id="cite-2-j" data-card="LAAC-002"><a href="#ref-2">[2]</a></span> 🤖 <span class="tag-ai">AI</span>：雖然 RMST 在統計上有正當理由，但中途變更 primary analysis method 容易引發「data-driven change」的質疑。
+      </div>
+
+      <div class="limitation-major">
+        <strong>🔴 Major：嚴重 underpowered</strong><br>
+        📎 原計畫收案 1586 人，實際僅 912 人隨機化（888 人 ITT），power 嚴重不足。<span class="cite" id="cite-2-k" data-card="LAAC-002"><a href="#ref-2">[2]</a></span> 🤖 <span class="tag-ai">AI</span>：在 sample size 砍半的情況下，noninferiority 試驗幾乎注定失敗——這是 CLOSURE-AF 負面結論的重要背景。
+      </div>
+
+      <h3>Editorial 偏頗</h3>
+
+      <div class="limitation-minor">
+        <strong>🟢 Minor：Widimský 的雙重身分</strong><br>
+        📎 Editorialist 為 PRAGUE-17 團隊成員，該試驗支持 LAAC 非劣於 NOAC，但他的 editorial 僅評論 CLOSURE-AF（negative trial）而未提及 CHAMPION-AF（positive trial）。<span class="cite" id="cite-3-h" data-card="LAAC-003"><a href="#ref-3">[3]</a></span> 🤖 <span class="tag-ai">AI</span>：選擇性評論可能導致讀者對 LAAC 整體證據的認知偏斜。
+      </div>
+
+      <div class="limitation-minor">
+        <strong>🟢 Minor：Sponsor bias（CHAMPION-AF）</strong><br>
+        📎 CHAMPION-AF 由 Boston Scientific（Watchman FLX 製造商）贊助，數據收集與分析由 sponsor 執行，5 位作者為 sponsor 員工。<span class="cite" id="cite-1-aa" data-card="LAAC-001"><a href="#ref-1">[1]</a></span> 🤖 <span class="tag-ai">AI</span>：相較之下，CLOSURE-AF 以公共經費（DZHK）資助 <span class="cite" id="cite-2-l" data-card="LAAC-002"><a href="#ref-2">[2]</a></span>，兩者的 funding 差異是解讀時需考量的結構性因素。
+      </div>
+    </section>
+
+    <!-- ====== §7 THE ROAST ROUND ====== -->
+    <section id="s7">
+      <h2>§7 The Roast Round — AI 辛辣點評</h2>
+
+      <div class="ai-disclaimer">
+        <strong>⚠️ AI 生成內容免責聲明</strong><br>
+        以下內容為 AI 基於文獻數據的主觀評論，採用輕鬆筆調呈現。所有引用的事實數據均可追溯至原始文獻卡片，但觀點、比喻與修辭均為 AI 生成，不代表任何學術機構或個人立場。臨床決策請依據完整證據與專業判斷。
+      </div>
+
+      <p>🤖 <span class="tag-ai">AI 生成</span>：讓我們用清晨第三杯咖啡的精神來看這兩篇 NEJM 文章。</p>
+
+      <p>兩篇同日登上 NEJM 的 LAAC 試驗，用最直白的話說就是：<strong>如果你精心挑選 71 歲、CHA₂DS₂-VASc 3.5 的中等風險患者，只用最新一代的 Watchman FLX，設一個 4.8 pp 的寬鬆 NI margin，LAAC 看起來很不錯</strong>（CHAMPION-AF <span class="cite" id="cite-1-ab" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>）。<strong>但如果你面對的是 78 歲、CHA₂DS₂-VASc 5.2 的真實世界老年患者，結果就沒那麼漂亮了</strong>——事實上是 negative trial（CLOSURE-AF <span class="cite" id="cite-2-m" data-card="LAAC-002"><a href="#ref-2">[2]</a></span>）。</p>
+
+      <p>CHAMPION-AF 的出血 superiority 確實亮眼——HR 0.55，出血減少近一半 <span class="cite" id="cite-1-ac" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>。但代價呢？中風可能多了 46%（HR 1.46, 95% CI 0.94-2.27）<span class="cite" id="cite-1-ad" data-card="LAAC-001"><a href="#ref-1">[1]</a></span>。用流鼻血減少來換取可能增加的中風——如果這是我的病人，我需要一個非常漫長的 shared decision-making 對話。</p>
+
+      <p>至於 Widimský 教授的 editorial <span class="cite" id="cite-3-i" data-card="LAAC-003"><a href="#ref-3">[3]</a></span>——他寫了一篇火力全開批評 LAAC 的文章，卻只敢批 CLOSURE-AF 而不提 CHAMPION-AF。作為 PRAGUE-17 的團隊成員（那個支持 LAAC 的試驗），這份選擇性沉默是戰術性的還是時間差造成的？We may never know.</p>
+
+      <p><em>Serious take</em>：CHAMPION-AF 是一個聰明的試驗設計故事——大樣本、單一裝置、寬 margin、乾淨族群。但改變臨床實踐需要的不僅是統計學上的 noninferiority，而是讓臨床醫師確信：把一顆藥丸換成一個心臟手術，對這位坐在你面前的病人是值得的。5 年追蹤數據，才是最終審判。</p>
+    </section>
+
+    <!-- ====== REFERENCES ====== -->
+    <section id="refs" class="references">
+      <h2>References</h2>
+      <table>
+        <thead>
+          <tr><th style="width:5%">[N]</th><th style="width:45%">文獻</th><th style="width:10%">Ring</th><th style="width:15%">角色</th><th style="width:25%">DOI</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="ref-1">[1] <a href="#cite-1-a" title="回正文第1處">↩</a> <a href="#cite-1-b" title="回正文第2處">↩</a> <a href="#cite-1-c" title="回正文第3處">↩</a> <a href="#cite-1-d" title="回正文第4處">↩</a> <a href="#cite-1-e" title="回正文第5處">↩</a> <a href="#cite-1-f" title="回正文第6處">↩</a> <a href="#cite-1-g" title="回正文第7處">↩</a> <a href="#cite-1-h" title="回正文第8處">↩</a> <a href="#cite-1-i" title="回正文第9處">↩</a> <a href="#cite-1-j" title="回正文第10處">↩</a> <a href="#cite-1-k" title="回正文第11處">↩</a> <a href="#cite-1-l" title="回正文第12處">↩</a> <a href="#cite-1-m" title="回正文第13處">↩</a> <a href="#cite-1-n" title="回正文第14處">↩</a> <a href="#cite-1-o" title="回正文第15處">↩</a> <a href="#cite-1-p" title="回正文第16處">↩</a> <a href="#cite-1-q" title="回正文第17處">↩</a> <a href="#cite-1-r" title="回正文第18處">↩</a> <a href="#cite-1-s" title="回正文第19處">↩</a> <a href="#cite-1-t" title="回正文第20處">↩</a> <a href="#cite-1-u" title="回正文第21處">↩</a> <a href="#cite-1-v" title="回正文第22處">↩</a> <a href="#cite-1-w" title="回正文第23處">↩</a> <a href="#cite-1-x" title="回正文第24處">↩</a> <a href="#cite-1-y" title="回正文第25處">↩</a> <a href="#cite-1-z" title="回正文第26處">↩</a> <a href="#cite-1-aa" title="回正文第27處">↩</a> <a href="#cite-1-ab" title="回正文第28處">↩</a> <a href="#cite-1-ac" title="回正文第29處">↩</a> <a href="#cite-1-ad" title="回正文第30處">↩</a></td>
+            <td>Doshi SK, Kar S, Nair DG, et al. Left Atrial Appendage Closure or Anticoagulation for Atrial Fibrillation. <em>N Engl J Med.</em> 2026. (Online first, March 28)</td>
+            <td>Ring 1</td>
+            <td>Target</td>
+            <td><a href="https://doi.org/10.1056/NEJMoa2517213" target="_blank">10.1056/NEJMoa2517213</a></td>
+          </tr>
+          <tr>
+            <td id="ref-2">[2] <a href="#cite-2-a" title="回正文第1處">↩</a> <a href="#cite-2-b" title="回正文第2處">↩</a> <a href="#cite-2-c" title="回正文第3處">↩</a> <a href="#cite-2-d" title="回正文第4處">↩</a> <a href="#cite-2-e" title="回正文第5處">↩</a> <a href="#cite-2-f" title="回正文第6處">↩</a> <a href="#cite-2-g" title="回正文第7處">↩</a> <a href="#cite-2-h" title="回正文第8處">↩</a> <a href="#cite-2-i" title="回正文第9處">↩</a> <a href="#cite-2-j" title="回正文第10處">↩</a> <a href="#cite-2-k" title="回正文第11處">↩</a> <a href="#cite-2-l" title="回正文第12處">↩</a> <a href="#cite-2-m" title="回正文第13處">↩</a></td>
+            <td>Landmesser U, Skurk C, Kirchhof P, et al. Left Atrial Appendage Closure or Medical Therapy in Atrial Fibrillation. <em>N Engl J Med.</em> 2026;394(13):1270-1280.</td>
+            <td>Ring 1</td>
+            <td>Companion</td>
+            <td><a href="https://doi.org/10.1056/NEJMoa2513310" target="_blank">10.1056/NEJMoa2513310</a></td>
+          </tr>
+          <tr>
+            <td id="ref-3">[3] <a href="#cite-3-a" title="回正文第1處">↩</a> <a href="#cite-3-b" title="回正文第2處">↩</a> <a href="#cite-3-c" title="回正文第3處">↩</a> <a href="#cite-3-d" title="回正文第4處">↩</a> <a href="#cite-3-e" title="回正文第5處">↩</a> <a href="#cite-3-f" title="回正文第6處">↩</a> <a href="#cite-3-g" title="回正文第7處">↩</a> <a href="#cite-3-h" title="回正文第8處">↩</a> <a href="#cite-3-i" title="回正文第9處">↩</a></td>
+            <td>Widimský P. Left Atrial Appendage Closure — Another Overused Method in Cardiology? <em>N Engl J Med.</em> 2026;394(13):1336-1338.</td>
+            <td>Ring 3</td>
+            <td>Editorial</td>
+            <td><a href="https://doi.org/10.1056/NEJMe2518067" target="_blank">10.1056/NEJMe2518067</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>Generated by Peregrine (遊隼) Journal Club Skill | 2026-04-12</p>
+  <p class="footer-disclaimer">AI-assisted literature review. All clinical decisions should be based on professional judgment.</p>
+</footer>
+
+</body>
+</html>
